@@ -165,6 +165,15 @@ a {
   margin-top: 36px;
 }
 
+.hero__title_about {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 76px;
+  line-height: 1.05;
+  letter-spacing: 1px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
