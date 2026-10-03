@@ -170,7 +170,7 @@ a {
   display: flex;
   align-items: center;
   min-height: 560px;
-  padding: 48px 64px;
+  padding: 60px 80px 72px;
   background-image: url("../image/photo-about.png");
   background-size: cover;
   background-position: center;
@@ -182,36 +182,34 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(64, 38, 22, 0.1);
+  background: rgba(77, 52, 35, 0.22);
 }
 
 .about__content {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 760px;
+  padding-left: 8px;
 }
 
 .about__heading {
-  margin: 0 0 18px;
-  margin-top: -200px;
-  margin-left: -50px;
+  margin: 0 0 30px;
   color: var(--text);
   font-family: var(--font-title);
-  font-size: clamp(2.2rem, 4vw, 5rem);
+  font-size: clamp(2rem, 3vw, 4.5rem);
   font-weight: 800;
-  line-height: 0.82;
+  line-height: 0.9;
   letter-spacing: -0.07em;
   text-transform: uppercase;
 }
 
 .about__title {
-  margin: 0;
-  margin-top: 50px;
+  margin: 0 0 30px;
   color: var(--text);
   font-family: var(--font-title);
   font-weight: 800;
-  line-height: 0.76;
-  letter-spacing: -0.08em;
+  line-height: 0.8;
+  letter-spacing: -0.07em;
   text-transform: uppercase;
 }
 
@@ -220,33 +218,43 @@ a {
 }
 
 .about__line--top {
-  margin-bottom: 6px;
-  font-size: clamp(2.1rem, 3.5vw, 4.5rem);
+  margin-bottom: 8px;
+  font-size: clamp(2.7rem, 4vw, 5rem);
 }
 
 .about__line--bottom {
   display: flex;
   align-items: flex-end;
-  gap: 0.18em;
+  gap: 0.16em;
   flex-wrap: wrap;
-  font-size: clamp(2.6rem, 4.3vw, 5.8rem);
+  font-size: clamp(3.3rem, 4.8vw, 6.5rem);
 }
-
+.about__accent,
 .about-text-yellowtail {
   color: #a61d10;
   font-family: "Yellowtail", cursive;
-  font-size: 1.1em;
+  font-size: 1.13em;
   font-weight: 400;
   line-height: 0.7;
   letter-spacing: 0;
-  text-transform: lowercase;
-  transform: translateY(-0.04em);
+  text-transform: uppercase;
   display: inline-block;
+  transform: translateY(-0.08em);
 }
 
 .about__coffee {
   display: inline-block;
   color: var(--text);
+}
+
+.about__text {
+  max-width: 700px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-family: var(--font-body);
+  font-size: clamp(1.35rem, 2vw, 2.1rem);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
 }
 
 .btn {
@@ -274,6 +282,41 @@ a {
   border: 1px solid #c9ad8c;
 }
 
+.about__buttons {
+  margin-top: 20px;
+}
+
+.about__buttons .btn {
+  position: relative;
+  height: auto;
+  padding: 0 0 4px;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  transition: none;
+}
+
+.about__buttons .btn::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.about__buttons .btn:hover {
+  opacity: 1;
+}
+
+.about__buttons .btn:hover::after {
+  transform: scaleX(1);
+}
+
 .hero__pager {
   display: flex;
   align-items: center;
@@ -288,6 +331,3 @@ a {
   height: 1px;
   background: var(--text-muted);
 }
-
-
-
