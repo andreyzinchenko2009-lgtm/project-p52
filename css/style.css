@@ -372,6 +372,7 @@ a {
 }
 
 .why__us__heading {
+  margin-top: -35px;
   margin-left: 70px;
   font-family: var(--font-title);
   font-size: clamp(1.7rem, 2.5vw, 3.6rem);
@@ -423,6 +424,97 @@ a {
   line-height: 1.3;
 }
 
+.carousel-categories {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 32px);
+  margin: 0 auto 24px;
+  padding: 6px 16px;
+  border-radius: 24px;
+  background: #e5d1ba;
+}
+
+.carousel-category {
+  min-width: 92px;
+  padding: 4px 20px;
+  border: 0;
+  border-radius: 20px;
+  background: #c38b61;
+  color: #2e1a10;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.carousel-category--active {
+  background: #593622;
+  color: #f4dfca;
+}
+
+.carousel-category:focus-visible {
+  outline: 2px solid #2e1a10;
+  outline-offset: 3px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 242px;
+  margin: 0 20px;
+  height: 374px;
+  padding: 14px 16px 18px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(46, 26, 16, 0.12);
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+}
+
+.card__title {
+  margin: auto 0 0;
+  font-size: 18px;
+}
+.our__menu {
+  position: relative;
+  padding: 40px 24px;
+  background: var(--bg-nav);
+}
+
+.our__background__fade {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.our__menu__content,
+.our__menu .carousel-categories,
+.our__menu .carousel {
+  position: relative;
+  z-index: 1;
+}
+
+.our__menu__heading {
+  margin-left: 70px;
+  font-family: var(--font-title);
+  font-size: clamp(1.7rem, 2.5vw, 3.6rem);
+}
+
 @media (max-width: 700px) {
   .why__us__mini__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -432,5 +524,15 @@ a {
 @media (max-width: 420px) {
   .why__us__mini__cards {
     grid-template-columns: 1fr;
+  }
+
+  .carousel-category {
+    min-width: 0;
+    padding-inline: 14px;
+    font-size: 16px;
+  }
+
+  .card {
+    flex-basis: min(242px, 100%);
   }
 }
