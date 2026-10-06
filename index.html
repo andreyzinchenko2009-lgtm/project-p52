@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="js/menu-categories.js" defer></script>
 </head>
 <body>
 
@@ -119,22 +120,22 @@
       <h2 class="our__menu__heading">OUR MENU</h2>
     </div>
     <div class="carousel-categories" aria-label="Menu categories">
-      <button class="carousel-category carousel-category--active" type="button" id="hot">Hot</button>
-      <button class="carousel-category" type="button" id="cold">Cold</button>
-      <button class="carousel-category" type="button" id="sweet">Sweet</button>
+      <button class="carousel-category carousel-category--active" type="button" id="hot" aria-pressed="true">Hot</button>
+      <button class="carousel-category" type="button" id="cold" aria-pressed="false">Cold</button>
+      <button class="carousel-category" type="button" id="sweet" aria-pressed="false">Sweet</button>
     </div>
     <div class="carousel" id="carousel-hot">
       <div class="card">
         <img src="./image/images-for-cards/espresso.png" alt="Coffee Ritual" class="card__img">
-        <h1 class="card__title" style="color: #2e1a10;" id="hot">Espresso</h1>
+        <h2 class="card__title" style="color: #2e1a10;">Espresso</h2>
       </div>
       <div class="card">
         <img src="./image/images-for-cards/latte.png" alt="Coffee Ritual" class="card__img">
-        <h1 class="card__title" style="color: #2e1a10;" id="hot">Latte</h1>
+        <h2 class="card__title" style="color: #2e1a10;">Latte</h2>
       </div>
       <div class="card">
         <img src="./image/images-for-cards/rapht.png" alt="Coffee Ritual" class="card__img">
-        <h1 class="card__title" style="color: #2e1a10;" id="hot">Honey Raf</h1>
+        <h2 class="card__title" style="color: #2e1a10;">Honey Raf</h2>
       </div>
     </div>
   </section>
