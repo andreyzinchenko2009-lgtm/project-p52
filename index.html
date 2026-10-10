@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Playfair+Display:ital,wght@1,500&family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script src="js/menu-categories.js" defer></script>
@@ -51,6 +51,7 @@
       </div>
     </div>
   </main>
+
   <section class="about">
     <div class="about__background__fade">
       <img src="./image/fade-bg.png" alt="Background Fade" class="about__background__fade-img">
@@ -77,6 +78,7 @@
       <img src="./image/photo-hero-about.png" alt="Coffee Ritual" class="about__img">
     </div>
   </section>
+
   <section class="why__us">
     <div class="text__whyus">
       <h2 class="why__us__heading">WHY US</h2>
@@ -112,6 +114,7 @@
       </article>
     </div>
   </section>
+
   <section class="our__menu">
     <div class="our__menu__background">
       <img src="./image/coffee.png" alt="coffee-zerna" class="coffee__zerna__background-img">
@@ -119,28 +122,167 @@
     <div class="our__background__fade">
       <img src="./image/fade-bg.png" alt="Background Fade" class="about__background__fade-img">
     </div>
-    <div class="our__menu__content">
-      <h2 class="our__menu__heading">OUR MENU</h2>
-    </div>
-    <div class="carousel-categories" aria-label="Menu categories">
-      <button class="carousel-category carousel-category--active" type="button" id="hot" aria-pressed="true">Hot</button>
-      <button class="carousel-category" type="button" id="cold" aria-pressed="false">Cold</button>
-      <button class="carousel-category" type="button" id="sweet" aria-pressed="false">Sweet</button>
-    </div>
-    <div class="carousel" id="carousel-hot">
-      <div class="card">
-        <img src="./image/images-for-cards/espresso.png" alt="Coffee Ritual" class="card__img">
-        <h2 class="card__title" style="color: #2e1a10;">Espresso</h2>
+
+    <div class="our__menu__header">
+      <div class="our__menu__title-group">
+        <h2 class="our__menu__heading">OUR MENU</h2>
+        <p class="our__menu__subtitle">A taste that <span>inspires</span> every day</p>
       </div>
-      <div class="card">
-        <img src="./image/images-for-cards/latte.png" alt="Coffee Ritual" class="card__img">
-        <h2 class="card__title" style="color: #2e1a10;">Latte</h2>
+
+      <div class="carousel-categories" aria-label="Menu categories">
+        <button class="carousel-category carousel-category--active" type="button" data-category="hot" aria-pressed="true">Hot</button>
+        <button class="carousel-category" type="button" data-category="cold" aria-pressed="false">Cold</button>
+        <button class="carousel-category" type="button" data-category="sweet" aria-pressed="false">Sweet</button>
       </div>
-      <div class="card">
-        <img src="./image/images-for-cards/rapht.png" alt="Coffee Ritual" class="card__img">
-        <h2 class="card__title" style="color: #2e1a10;">Honey Raf</h2>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel__track carousel__track--active" id="track-hot">
+        <div class="card">
+          <div class="card__price">60</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/espresso.png" alt="Espresso" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Espresso</h3>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__price">95</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/latte.png" alt="Latte" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Latte</h3>
+              <p class="card__subtitle">Espresso + Milk</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__price">100</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/rapht.png" alt="Honey Raf" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Honey Raf</h3>
+              <p class="card__subtitle">espresso+ milk+cream+honey</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel__track" id="track-cold" hidden>
+        <div class="card">
+          <div class="card__price">110</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/Iced_Latte-removebg-preview.png" alt="Iced Latte" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Iced Latte</h3>
+              <p class="card__subtitle">Espresso + Milk</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__price">145</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/Iced_Matcha_Latte-removebg-preview.png" alt="Iced Matcha Latte" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Iced Matcha Latte</h3>
+              <p class="card__subtitle">Matcha + Milk</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__price">150</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/Bumble-removebg-preview.png" alt="Bumble" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Bumble</h3>
+              <p class="card__subtitle">Espresso + orange juice</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel__track" id="track-sweet" hidden>
+        <div class="card">
+          <div class="card__price">120</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/Raspberry croissant.png" alt="Raspberry croissant" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Raspberry croissant</h3>
+              <p class="card__subtitle">White chocolate</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__price">95</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/Macarons.png" alt="Macarons" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Macarons</h3>
+              <p class="card__subtitle">Assortment</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__price">120</div>
+          <div class="card__image-container">
+            <img src="./image/images-for-cards/Caramel croissant.png" alt="Caramel croissant" class="card__img">
+          </div>
+          <div class="card__info">
+            <div class="card__details">
+              <h3 class="card__title">Caramel croissant</h3>
+              <p class="card__subtitle">White chocolate</p>
+            </div>
+            <button class="card__favorite-btn" type="button" aria-label="Add to favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
 </body>
 </html>

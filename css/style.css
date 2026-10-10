@@ -31,7 +31,6 @@ a {
   text-decoration: none;
 }
 
-
 .nav {
   position: relative;
   display: flex;
@@ -84,6 +83,7 @@ a {
   font-size: 60px;
   color: var(--accent);
 }
+
 .hero {
   position: relative;
   flex: 1;
@@ -166,6 +166,7 @@ a {
   gap: 36px;
   margin-top: 36px;
 }
+
 /* About */
 .about {
   position: relative;
@@ -232,6 +233,7 @@ a {
   flex-wrap: wrap;
   font-size: clamp(2.7rem, 3.8vw, 5.2rem);
 }
+
 .about__accent,
 .about-text-yellowtail {
   color: var(--text-accent-dark-red);
@@ -315,6 +317,7 @@ a {
 .about__buttons .btn:hover {
   opacity: 1;
 }
+
 .about__image {
   display: flex;
   position: relative;
@@ -324,7 +327,7 @@ a {
   max-width: 300px;
 }
 
-.about__background__fade-img{
+.about__background__fade-img {
   display: block;
   width: 100%;
   height: 100%;
@@ -343,7 +346,6 @@ a {
   display: block;
   width: 700px;
   height: 400px;
-
 }
 
 .about__buttons .btn:hover::after {
@@ -512,12 +514,8 @@ a {
 
 @media (prefers-reduced-motion: reduce) {
   .carousel-category,
-<<<<<<< HEAD
   .card,
   .carousel__track {
-=======
-  .card {
->>>>>>> d5594c057729015b5ff986a57f9f50a94a859f76
     transition: none;
     animation: none;
   }
@@ -534,6 +532,7 @@ a {
   margin: auto 0 0;
   font-size: 18px;
 }
+
 .our__menu {
   position: relative;
   padding: 40px 24px 90px;
@@ -543,19 +542,12 @@ a {
 
 .our__menu__background {
   position: absolute;
-<<<<<<< HEAD
   inset: 0;
-=======
-  right: -6%;
-  bottom: -6%;
-  left: 0;
->>>>>>> d5594c057729015b5ff986a57f9f50a94a859f76
   z-index: 2;
   pointer-events: none;
 }
 
 .coffee__zerna__background-img {
-<<<<<<< HEAD
   position: absolute;
   right: -3%;
   bottom: -4%;
@@ -565,15 +557,6 @@ a {
   height: auto;
   opacity: 0.78;
   filter: drop-shadow(0 8px 14px rgba(25, 12, 8, 0.2));
-=======
-  display: block;
-  width: 260px;
-  max-width: 100%;
-  height: auto;
-  opacity: 0.9;
-  filter: drop-shadow(0 12px 18px rgba(25, 12, 8, 0.28));
-  transform: scale(0.96);
->>>>>>> d5594c057729015b5ff986a57f9f50a94a859f76
 }
 
 .our__background__fade {
@@ -596,15 +579,11 @@ a {
   font-size: clamp(1.7rem, 2.5vw, 3.6rem);
   color: var(--text);
 }
-<<<<<<< HEAD
+
 .our__menu .carousel-categories {
   margin: -80px 0 24px auto;
-=======
-.carousel-categories{
-  margin-right: 50px;
-  margin-top: -80px;
->>>>>>> d5594c057729015b5ff986a57f9f50a94a859f76
 }
+
 @media (max-width: 700px) {
   .why__us__mini__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -636,5 +615,182 @@ a {
 
   .our__menu .carousel-categories {
     margin-top: 0;
+  }
+}
+/* --- СТИЛІ СЕКЦІЇ ТА КАРТОК МЕНЮ --- */
+
+.our__menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+
+.our__menu__heading {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: clamp(1.7rem, 2.5vw, 3.6rem);
+  color: var(--text);
+  line-height: 1;
+}
+
+.our__menu__subtitle {
+  margin: 6px 0 0;
+  font-size: 18px;
+  color: #e2cca8;
+  font-family: var(--font-body);
+}
+
+.our__menu__subtitle span {
+  font-family: "Yellowtail", cursive;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+/* Категорії */
+.carousel-categories {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border-radius: 20px;
+  background: #d8b896;
+}
+
+.carousel-category {
+  padding: 6px 20px;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: #3d2314;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.carousel-category--active {
+  background: #4a2818;
+  color: #ffffff;
+}
+
+/* Карусель та трек */
+.carousel {
+  position: relative;
+  min-height: 360px;
+}
+
+.carousel__track {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  width: 100%;
+}
+
+.carousel__track[hidden] {
+  display: none;
+}
+
+/* Дизайн Картки */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 330px;
+  padding: 20px 16px 16px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+/* Ціна (значок зверху праворуч) */
+.card__price {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #3a2216;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+/* Контейнер картинки */
+.card__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+}
+
+.card__img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* Інформація знизу */
+.card__info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card__details {
+  flex: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.card__subtitle {
+  margin: 3px 0 0;
+  font-size: 11px;
+  color: #888888;
+  line-height: 1.2;
+}
+
+/* Кнопка серця */
+.card__favorite-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #1a1a1a;
+  font-size: 18px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.card__favorite-btn:hover {
+  transform: scale(1.15);
+}
+
+.card__favorite-btn.is-active {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .our__menu__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .carousel__track {
+    flex-wrap: wrap;
   }
 }
