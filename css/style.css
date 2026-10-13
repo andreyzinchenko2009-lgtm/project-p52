@@ -19,6 +19,7 @@
 /* Стиль для плавного скролу */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   font-size: 15px;
+  overflow-x: hidden;
 }
 
 a {
@@ -473,23 +475,25 @@ a {
 .carousel {
   position: relative;
   min-height: 414px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .carousel__track {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  inset: auto;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  width: 100%;
   will-change: transform;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  flex: 0 0 242px;
+  flex: 0 0 clamp(242px, 18vw, 330px);
   margin: 0 20px;
-  height: 374px;
+  height: clamp(374px, 27vw, 470px);
   padding: 14px 16px 18px;
   border-radius: 18px;
   background: #fff;
@@ -529,20 +533,20 @@ a {
 .card__img {
   display: block;
   width: 100%;
-  height: 260px;
+  height: clamp(220px, 16vw, 290px);
   object-fit: contain;
 }
 
 .card__title {
   margin: auto 0 0;
-  font-size: 18px;
+  font-size: clamp(16px, 1.2vw, 20px);
 }
 
 .our__menu {
   position: relative;
   padding: 40px 24px 90px;
   background: var(--bg-nav);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .our__menu__background {
@@ -640,6 +644,127 @@ a {
   line-height: 1;
 }
 
+@media (max-width: 1400px) {
+  .about {
+    min-height: 480px;
+    padding: 44px 42px 54px;
+  }
+
+  .about__image {
+    margin-left: 80px;
+  }
+
+  .about__img {
+    width: min(52vw, 640px);
+    height: auto;
+    margin-right: 0;
+  }
+
+  .why__us {
+    padding: 30px 18px 24px;
+  }
+
+  .why__us__heading,
+  .our__menu__heading {
+    margin-left: 30px;
+  }
+
+  .why__us__mini__cards {
+    gap: 18px;
+  }
+
+  .our__menu {
+    padding: 26px 18px 54px;
+  }
+
+  .our__menu__header {
+    margin-bottom: 18px;
+    padding: 0 18px;
+  }
+
+  .carousel {
+    min-height: 340px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .our__menu {
+    padding-top: 56px;
+    padding-bottom: 110px;
+  }
+
+  .carousel {
+    min-height: 500px;
+  }
+
+  .card {
+    width: clamp(290px, 18vw, 360px);
+    height: clamp(390px, 24vw, 500px);
+  }
+
+  .card__image-container {
+    height: clamp(240px, 19vw, 300px);
+  }
+
+  .card__img {
+    max-height: clamp(220px, 18vw, 280px);
+    height: clamp(220px, 18vw, 280px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    padding: 28px 34px 18px;
+  }
+
+  .hero__content {
+    max-width: 520px;
+  }
+
+  .hero__title,
+  .hero__ritual {
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+  }
+
+  .hero__accent {
+    font-size: clamp(2.5rem, 4.3vw, 4rem);
+  }
+
+  .about {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about__content {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .about__image {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .about__img {
+    width: min(76vw, 540px);
+    margin-right: 0;
+  }
+
+  .why__us__mini__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .our__menu .carousel-categories {
+    margin: 0 0 24px auto;
+  }
+
+  .carousel__track {
+    gap: 16px;
+  }
+}
+
 .our__menu__subtitle {
   margin: 6px 0 0;
   font-size: 18px;
@@ -690,7 +815,7 @@ a {
 .carousel__track {
   display: flex;
   justify-content: center;
-  gap: 28px;
+  gap: clamp(20px, 2vw, 42px);
   width: 100%;
 }
 
@@ -704,8 +829,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 250px;
-  height: 330px;
+  width: clamp(250px, 18vw, 330px);
+  height: clamp(330px, 24vw, 430px);
   padding: 20px 16px 16px;
   border-radius: 24px;
   background: #ffffff;
@@ -732,13 +857,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: clamp(200px, 16vw, 270px);
   width: 100%;
 }
 
 .card__img {
   max-width: 100%;
-  max-height: 180px;
+  max-height: clamp(180px, 14vw, 230px);
   object-fit: contain;
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.15));
 }
