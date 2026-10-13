@@ -18,15 +18,15 @@
 
 <header class="nav">
     <nav class="nav__links">
-        <a href="#" class="nav__link nav__link--active">Home</a>
-        <a href="#" class="nav__link">About</a>
-        <a href="#" class="nav__link">Coffee</a>
-        <a href="#" class="nav__link">Desserts</a>
-        <a href="#" class="nav__link">Contacts</a>
+        <a href="#home" class="nav__link nav__link--active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#menu" class="nav__link">Coffee</a>
+        <a href="#menu" class="nav__link">Desserts</a>
+        <a href="#findus" class="nav__link">Contacts</a>
     </nav>
 </header>
 
-  <main class="hero">
+  <main class="hero" id="home">
     <div class="hero__content">
       <h1 class="hero__title">
         <span class="hero__line hero__line--top">YOUR DAILY</span>
@@ -39,8 +39,8 @@
       </p>
 
       <div class="hero__buttons">
-        <a href="#" class="btn btn--filled">VIEW MENU</a>
-        <a href="#" class="btn btn--outline">ORDER NOW</a>
+        <a href="#menu" class="btn btn--filled">VIEW MENU</a>
+        <a href="#menu" class="btn btn--outline">ORDER NOW</a>
       </div>
 
       <div class="hero__pager">
@@ -52,7 +52,7 @@
     </div>
   </main>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__background__fade">
       <img src="./image/fade-bg.png" alt="Background Fade" class="about__background__fade-img">
     </div>
@@ -115,7 +115,7 @@
     </div>
   </section>
 
-  <section class="our__menu">
+  <section class="our__menu" id="menu">
     <div class="our__menu__background">
       <img src="./image/coffee.png" alt="coffee-zerna" class="coffee__zerna__background-img">
     </div>
@@ -283,6 +283,79 @@
       </div>
     </div>
   </section>
-
+  <section class="account" id="joinus">
+    <div class="account-form-container">
+      <h2 class="account-form-heading">Create an account</h2>
+      <div class="account-form-wrapper">
+        <div class="feedback-badge">
+          <img src="./image/forContacts/form-logo.png" alt="Cup icon" class="feedback-badge-img">
+        </div> 
+        <div class="account-form">
+          <!--після formsubmit.co/будь-яка пошта (я взяла свою для проектів)-->
+          <form action="https://formsubmit.co/mystore13email14@gmail.com" method="post" class="account-form-form">
+            <h3 class="account-form-subheading">Feedback form</h3>
+            <div class="account-form-input-group">
+              <label for="name" class="account-form-label">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required class="account-form-input"> 
+              <label for="email" class="account-form-label">Email</label>
+              <input type="email" id="email" name="email" placeholder="yourexample@gmail.com" required class="account-form-input">
+              <label for="message" class="account-form-label">Message</label>
+              <textarea id="message" name="message" placeholder="Your feedback, question, or suggestion..." class="account-form-textarea"></textarea>
+            </div>
+            <div class="account-button-wrapper">
+              <button type="submit" class="account-form-button">JOIN US</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contacts" id="findus">
+    <div class="contacts-info"> 
+      <div class="contacts-set-of-info">
+        <div class="contacts-left-side">
+          <h1 class="contacts-info-heading">FIND US HERE</h1> 
+          <h2 class="contacts-info-subheading">
+            Come for the coffee, stay for the <span class="atmosphere-text">atmosphere.</span>
+          </h2>
+          <div class="contacts-info-item-container">
+            <div class="contacts-info-item">
+              <div class="contacts-info-img">
+                <img src="./image/forContacts/1-іконка.png" alt="Location Icon" class="contacts-info__icon">
+              </div>
+              <div class="contacts-info-content">
+                <h3 class="contacts-info-title">OUR LOCATION</h3>
+                <p class="contacts-info-text">Kyiv, Ukraine<br>вул. Хрещатик, 24</p>
+              </div>
+            </div>
+            <div class="contacts-info-item">
+              <div class="contacts-info-img">
+                <img src="./image/forContacts/2-іконка.png" alt="Hours Icon" class="contacts-info__icon">
+              </div>
+              <div class="contacts-info-content">
+                <h3 class="contacts-info-title">OPENING HOURS</h3>
+                <p class="contacts-info-text">Mon-Fri: 08:00 - 21:00<br>Sat-Sun: 09:00 - 22:00</p>
+              </div>
+            </div>
+            <div class="contacts-info-item">
+              <div class="contacts-info-img">
+                <img src="./image/forContacts/3-іконка.png" alt="Parking Icon" class="contacts-info__icon">
+              </div>
+              <div class="contacts-info-content">
+                <h3 class="contacts-info-title">PARKING</h3>
+                <p class="contacts-info-text">Parking is available near the café.</p>
+              </div>
+            </div>
+            <button class="contacts-info-button">GET DIRECTIONS</button>
+          </div>
+        </div>
+        <div class="contacts-info-map">
+          <img src="./image/forContacts/карта..гео.png" alt="Map" class="contacts-info-map-img">
+        </div>
+          <img src="./image/forContacts/coffee-for-map-top.png" alt="Coffee beans decoration" class="bean-decor bean-top-right">
+          <img src="./image/forContacts/coffee-for-map-bottom.png" alt="Coffee beans decoration" class="bean-decor bean-bottom-left">
+      </div>
+    </div>
+  </section>
 </body>
 </html>
