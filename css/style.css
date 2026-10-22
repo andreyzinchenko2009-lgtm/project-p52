@@ -145,7 +145,7 @@ a { color: var(--text); text-decoration: none; }
 .about-whyus {
   position: relative;
   isolation: isolate;
-  background: var(--bg-nav) url("../image/fade bg/fadeone.png") center / cover no-repeat;
+  background: var(--bg-nav) url("../image/fade%20bg/fadeone.png") center / cover no-repeat;
 }
 .about-whyus::before {
   content: "";
@@ -336,7 +336,7 @@ a { color: var(--text); text-decoration: none; }
   inset: 0;
   background:
     linear-gradient(to bottom, transparent 65%, var(--bg-nav) 100%),
-    url("../image/fade bg/fadeone.png") center / cover no-repeat;
+    url("../image/fade%20bg/fadeone.png") center / cover no-repeat;
   pointer-events: none;
 }
 .our__menu__background { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
