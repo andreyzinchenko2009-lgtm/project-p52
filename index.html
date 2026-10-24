@@ -17,12 +17,15 @@
 <body>
 
 <header class="nav">
-    <nav class="nav__links">
+    <nav class="nav__links" aria-label="Main navigation">
         <a href="#home" class="nav__link nav__link--active">Home</a>
         <a href="#about" class="nav__link">About</a>
         <a href="#menu" class="nav__link">Coffee</a>
-        <a href="#menu" class="nav__link">Desserts</a>
+        <a href="#joinus" class="nav__link">Sign in</a>
         <a href="#findus" class="nav__link">Contacts</a>
+        <a href="#menu" class="nav__cart" aria-label="Open menu">
+          <img src="./image/icons/icon-header.png" alt="" aria-hidden="true">
+        </a>
     </nav>
 </header>
 
@@ -326,7 +329,7 @@
               </div>
               <div class="contacts-info-content">
                 <h3 class="contacts-info-title">OUR LOCATION</h3>
-                <p class="contacts-info-text">Kyiv, Ukraine<br>вул. Хрещатик, 24</p>
+                <p class="contacts-info-text">Бровари, Україна<br>кав'ярня «Болт», Алея любові</p>
               </div>
             </div>
             <div class="contacts-info-item">
@@ -351,7 +354,13 @@
           </div>
         </div>
         <div class="contacts-info-map">
-          <img src="./image/forContacts/карта..гео.png" alt="Map" class="contacts-info-map-img">
+          <iframe
+            class="contacts-info-map-frame"
+            title="Map showing Bolt coffee shop at Alley of Love, Brovary"
+            src="https://maps.google.com/maps?q=%D0%91%D0%BE%D0%BB%D1%82%20%D0%BA%D0%B0%D0%B2%D1%8F%D1%80%D0%BD%D1%8F%2C%20%D0%90%D0%BB%D0%B5%D1%8F%20%D0%BB%D1%8E%D0%B1%D0%B2%D1%96%2C%20%D0%91%D1%80%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%2C%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0&z=18&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          ></iframe>
         </div>
           <img src="./image/forContacts/coffee-for-map-top.png" alt="Coffee beans decoration" class="bean-decor bean-top-right">
           <img src="./image/forContacts/coffee-for-map-bottom.png" alt="Coffee beans decoration" class="bean-decor bean-bottom-left">
