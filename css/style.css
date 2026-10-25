@@ -553,7 +553,7 @@ a { color: var(--text); text-decoration: none; }
 
 .account {
   --a: clamp(0.6px, calc(100vw / 989), 1.45px);
-  --account-photo: url("../image/Копія\ _Review_\ Quick\ Mill\ Pippa\ Espresso\ Machine.gif_");
+  --account-photo: url("../image/Review_QuickMillPippaEspressoMachine-ezgif.com-optimize.gif");
  
   position: relative;
   display: grid;
